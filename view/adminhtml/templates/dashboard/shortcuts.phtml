@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="page-actions">
+    <div class="page-actions-inner">
+        <div class="page-actions-buttons">
+            <form class="action-element"
+                  action="<?= $block->escapeUrl($block->getUrl('sales/order_create/start')) ?>"
+                  method="post">
+                <input
+                        name="form_key"
+                        type="hidden"
+                        value="<?= $block->escapeHtmlAttr($block->getFormKey()) ?>"/>
+                <button
+                        class="action-primary"
+                        type="submit"
+                        title="<?= $block->escapeHtmlAttr(__('Create New Order')) ?>">
+                    <?= $block->escapeHtml(__('Create New Order')) ?>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
