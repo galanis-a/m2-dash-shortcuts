@@ -1,12 +1,12 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * @var \Gladd\DashboardShortcuts\Block\Adminhtml\Shortcuts $block
  */
 ?>
 <div class="page-actions">
     <div class="page-actions-inner">
         <div class="page-actions-buttons">
+            <?php if ($block->canShowCreateOrderButton()) : ?>
             <form class="action-element"
                   action="<?= $block->escapeUrl($block->getUrl('sales/order_create/start')) ?>"
                   method="post">
@@ -21,6 +21,7 @@
                     <?= $block->escapeHtml(__('Create New Order')) ?>
                 </button>
             </form>
+            <?php endif; ?>
         </div>
     </div>
 </div>
