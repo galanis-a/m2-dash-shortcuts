@@ -1,7 +1,7 @@
 {
   "name": "gladd/m2-dash-shortcuts",
   "description": "Useful dashboard shortcuts for Magento 2",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "magento2-module",
   "license": "MIT",
   "authors": [
