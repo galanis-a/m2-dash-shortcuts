@@ -22,6 +22,22 @@
                 </button>
             </form>
             <?php endif; ?>
+            <?php if ($block->canShowImportButton()) : ?>
+                <form class="action-element"
+                      action="<?= $block->escapeUrl($block->getUrl('adminhtml/import')) ?>"
+                      method="post">
+                    <input
+                            name="form_key"
+                            type="hidden"
+                            value="<?= $block->escapeHtmlAttr($block->getFormKey()) ?>"/>
+                    <button
+                            class="action-primary"
+                            type="submit"
+                            title="<?= $block->escapeHtmlAttr(__('Import')) ?>">
+                        <?= $block->escapeHtml(__('Import')) ?>
+                    </button>
+                </form>
+            <?php endif; ?>
         </div>
     </div>
 </div>

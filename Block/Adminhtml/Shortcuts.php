@@ -27,4 +27,8 @@ class Shortcuts extends Template
         return $this->authorization->isAllowed('Magento_Sales::create');
     }
 
+    public function canShowImportButton() {
+        return $this->authorization->isAllowed('Magento_ImportExport::import');
+    }
+
 }
